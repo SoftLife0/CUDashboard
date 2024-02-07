@@ -19,4 +19,16 @@ const getUserData = async (userId, token) => {
   }
 };
 
+const getAllocationData = async (userId, token) => {
+  try {
+    const requestData = { userId, token };
+    const response = await api.get('/allocation', {
+      params: requestData // ask kweku to teach me 
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error(`Error fetching allocation data: ${error.message}`);
+  }
+};
+
 export { getUserData };
