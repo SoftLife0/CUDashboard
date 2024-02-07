@@ -13,6 +13,18 @@ const getUserData = async (userId, token) => {
   try {
     const requestData = { userId, token };
     const response = await api.post('/dashboard', requestData);
+    return response.data; //For POST requests, data is typically sent in the request body, so we pass the data directly to api.post
+  } catch (error) {
+    throw new Error(`Error fetching user data: ${error.message}`);
+  }
+};
+
+const getMessages = async (userId, token) => {
+  try {
+    const requestData = {userId, token};
+    const response = await api.get('/mymessages', {
+      params: requestData //For GET requests, data is often sent as query parameters in the URL, so we use the params option in Axios to specify these query parameters.
+    });
     return response.data;
   } catch (error) {
     throw new Error(`Error fetching user data: ${error.message}`);
