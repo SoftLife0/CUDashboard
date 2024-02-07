@@ -67,13 +67,13 @@ input {
   background-color: #992621;
   border: none;
   color: white;
-  border-radius: 5px ;
-  padding: 10px 18px;
+  border-radius:10px ;
+  padding: 16px 22px;
   box-shadow: 0 2px 8px 0 rgba(48, 44, 255, 0.1);
   text-align: center;
   font-weight: bold;
   transition: width 2s;
-  cursor: pointer;
+  width: 100%;
 }
 
 /* End of Header */
@@ -278,42 +278,27 @@ input {
   }
 }
 
-.uploader label {
-  /* float: left; */
-  clear: both;
+/* Login & Sign up  */
+
+.defaultCard{
+   
+  box-shadow: 0 2px 8px 0 rgba(13, 10, 44, 0.06), 0 60px 80px 0 rgba(74, 58, 255, 0.02), 0 40px 50px 0 rgba(74, 58, 255, 0.05);
+  /* cursor: pointer; */
+  padding: 30px;
   width: 100%;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  background: #fff;
-  border-radius: 7px;
-  border: 3px solid #eee;
-  transition: all .2s ease;
-  user-select: none;
+  transition: width 1s;
+  margin-bottom: 3vh;
 }
-.uploader label:hover {
-  border-color: #ca181e;
+.inputCard{
+   /* box-shadow: 0 2px 8px 0 rgba(48, 44, 255, 0.1); */
+   border-radius: 10px;    
+   border: none;
+   padding: 20px;
+   width: 100%;
+   box-shadow: 0 2px 8px 0 rgba(13, 10, 44, 0.06), 0 60px 80px 0 rgba(74, 58, 255, 0.02), 0 40px 50px 0 rgba(74, 58, 255, 0.05);
 }
-.uploader label.hover {
-  border: 3px solid #ca181e;
-  box-shadow: inset 0 0 0 6px #eee;
-}  
-
-.csv-icon {
-  font-size: 3rem;
-  color: #992621;
-}
-.start {
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
-.start h5 {
-  font-size: 20px;
-  padding: 2vh;
-  color: #000;
-}
-
-input[type="file"] {
-  display: none;
+.inputTextHolder{
+   width: 100%;
+   margin-top: 5vh;
+   /* box-shadow: 0 2px 8px 0 rgba(13, 10, 44, 0.06), 0 60px 80px 0 rgba(74, 58, 255, 0.02), 0 40px 50px 0 rgba(74, 58, 255, 0.05); */
 }

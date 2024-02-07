@@ -16,7 +16,7 @@ function Header({OpenSidebar, onProfileClick, showLogout, handleLogout})  {
         </div>
         <div className='header-right'>
         <div className=''>
-          <button className='pill-button' style={{ padding: '8px 12px'}}>
+          <button className='pill-button' style={{ padding: '8px 12px', borderRadius: '5px'}}>
             Logout
           </button>
         </div>

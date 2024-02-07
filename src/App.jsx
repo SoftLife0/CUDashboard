@@ -1,33 +1,20 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 
 
 
-function App() {
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
-
-  const OpenSidebar = () => {
-    console.log("Triggered sidebar function")
-    setOpenSidebarToggle(!openSidebarToggle)
-  }
-
-  
+function App() { 
   return (
     <Router>
-      <div className='grid-container'>
-        <Header OpenSidebar={OpenSidebar} />
-        <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-        <main className='main-container'>
+      <main>
           <Switch>
-            <Route exact path="/" component={Dashboard} />
-            
+            <Route exact path="/" component={Dashboard} />         
+            <Route exact path="/login" component={Login} />         
           </Switch>
-        </main>
-      </div>
+      </main>
     </Router>  
   )
 }
