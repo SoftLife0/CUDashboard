@@ -1,70 +1,57 @@
 import React from 'react';
-import { Dropdown, Table, Badge } from 'react-bootstrap';
+import { Table, Badge } from 'react-bootstrap';
 // import { BiMenu } from 'react-icons/bs';
 
 const List = () => {
-  const salesData = [
-    { id: '#2457', customer: 'Brandon Jacob', product: 'At praesentium minu', price: '$64', status: 'Approved' },
-    { id: '#2147', customer: 'Bridie Kessler', product: 'Blanditiis dolor omnis similique', price: '$47', status: 'Pending' },
-    { id: '#2049', customer: 'Ashleigh Langosh', product: 'At recusandae consectetur', price: '$147', status: 'Approved' },
-    { id: '#2644', customer: 'Angus Grady', product: 'Ut voluptatem id earum et', price: '$67', status: 'Rejected' },
-    { id: '#2644', customer: 'Raheem Lehner', product: 'Sunt similique distinctio', price: '$165', status: 'Approved' }
+  const staffData = [
+    { id: '2457', name: 'Nana Kweku Adumatta', department: 'IT Directorate', rank: 'Senior Member' },
+    { id: '2147', name: 'Onikosi Adewale', department: 'Finance Directorate', rank: 'Junior Staff' },
+    { id: '2457', name: 'Nana Kweku Adumatta', department: 'Audit Directorate', rank: 'Duputy Registrar' },
+    { id: '2147', name: 'Onikosi Adewale', department: 'Chaplaincy', rank: 'Senior Staff' },
+    { id: '2457', name: 'Nana Kweku Adumatta', department: 'SET', rank: 'NSS' },
+    { id: '2147', name: 'Onikosi Adewale', department: 'FASS', rank: 'Faculty' },
   ];
 
-  const getStatusBadge = (status) => {
-    switch (status) {
-      case 'Approved':
-        return <Badge bg="success">Approved</Badge>;
-      case 'Pending':
-        return <Badge bg="warning">Pending</Badge>;
-      case 'Rejected':
-        return <Badge bg="danger">Rejected</Badge>;
+  const getRankBadge = (rank) => {
+    switch (rank) {
+      case 'Senior Member':
+        return <Badge bg="success">Senior Member</Badge>;
+      case 'Junior Staff':
+        return <Badge bg="warning">Junior Staff</Badge>;
+      case 'Duputy Registrar':
+        return <Badge bg="danger">Duputy Registrar</Badge>;
+      case 'Senior Staff':
+        return <Badge bg="info">Senior Staff</Badge>;
+        case 'Faculty':
+        return <Badge bg="primary">Faculty</Badge>;
       default:
-        return <Badge bg="secondary">{status}</Badge>;
+        return <Badge bg="dark">{rank}</Badge>;
     }
   };
 
   return (
     <div className="col-12">
-      <div className="card recent-sales overflow-auto">
-        <div className="filter">
-          <Dropdown>
-            <Dropdown.Toggle variant="link" className="icon">
-              {/* <BiMenu /> */}
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu className="dropdown-menu-end dropdown-menu-arrow">
-              <Dropdown.Header className="text-start">
-                <h6>Filter</h6>
-              </Dropdown.Header>
-              <Dropdown.Item href="#">Today</Dropdown.Item>
-              <Dropdown.Item href="#">This Month</Dropdown.Item>
-              <Dropdown.Item href="#">This Year</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
+      <div className="card overflow-auto">
 
         <div className="card-body">
-          <h5 className="card-title">Recent Sales <span>| Today</span></h5>
+          <h5 className="card-title">Recent Staff </h5>
 
           <Table borderless className="datatable">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Customer</th>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Status</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Rank</th>
               </tr>
             </thead>
             <tbody>
-              {salesData.map((sale, index) => (
+              {staffData.map((staff, index) => (
                 <tr key={index}>
-                  <th scope="row"><a href="#">{sale.id}</a></th>
-                  <td>{sale.customer}</td>
-                  <td><a href="#" className="text-primary">{sale.product}</a></td>
-                  <td>{sale.price}</td>
-                  <td>{getStatusBadge(sale.status)}</td>
+                  <th scope="row">{staff.id}</th>
+                  <td><a href="#" className="text-primary">{staff.name}</a></td>
+                  <td>{staff.department}</td>
+                  <td>{getRankBadge(staff.rank)}</td>
                 </tr>
               ))}
             </tbody>
