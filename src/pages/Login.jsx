@@ -31,11 +31,11 @@ function Login() {
                                 <label htmlFor="">Password</label>
                                 <input className="inputCard" placeholder="Enter your password" type="password"/>
                             </div>
-
-                            <div className='pill-button' style={{ marginTop: '4vh'}}>Submit</div>
-
                             <br />
-                            
+                            <Link to='/'>
+                                <button type='submit' className='mb- pill-button'>Submit</button>
+                            </Link>
+
                             <Link>
                             <h6 className="text-center">I dont have an account!</h6>
                             </Link>

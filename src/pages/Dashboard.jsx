@@ -3,6 +3,7 @@ import { getUserData } from '../utils/api';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import List from '../components/List';
+import Card from '../components/Card';
 
 const Dashboard = () => {
 
@@ -44,8 +45,13 @@ const Dashboard = () => {
         <h5>DASHBOARD</h5>
 
         <div className='row'>
-          <div className="col-12">
+          <div className="col-8">
+            <Card />
             <List />
+          </div>
+
+          <div className="col-md-4">
+            
           </div>
         </div>
 
