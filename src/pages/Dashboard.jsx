@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import List from '../components/List';
 import Card from '../components/Card';
+import Notificaton from '../components/Notificaton';
 
 const Dashboard = () => {
 
@@ -45,13 +46,13 @@ const Dashboard = () => {
         <h5>DASHBOARD</h5>
 
         <div className='row'>
-          <div className="col-8">
+          <div className="col-lg-8">
             <Card />
             <List />
           </div>
 
-          <div className="col-md-4">
-            
+          <div className="col-lg-4">
+            <Notificaton />
           </div>
         </div>
 

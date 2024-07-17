@@ -200,6 +200,10 @@ input {
   border-radius: 20px 0 0 0;
 }
 
+.card {
+  margin: 20px 0;
+}
+
 .main-cards {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -299,4 +303,51 @@ input {
    width: 100%;
    margin-top: 5vh;
    /* box-shadow: 0 2px 8px 0 rgba(13, 10, 44, 0.06), 0 60px 80px 0 rgba(74, 58, 255, 0.02), 0 40px 50px 0 rgba(74, 58, 255, 0.05); */
+}
+
+/* Activity */
+.activity {
+  font-size: 14px;
+}
+
+.activity .activity-item .activite-label {
+  color: #888;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-width: 64px;
+}
+
+.activity .activity-item .activite-label::before {
+  content: "";
+  position: absolute;
+  right: -11px;
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  background-color: #eceefe;
+}
+
+.activity .activity-item .activity-badge {
+  margin-top: 3px;
+  z-index: 1;
+  font-size: 11px;
+  line-height: 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 3px solid #fff;
+  flex-grow: 0;
+}
+
+.activity .activity-item .activity-content {
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.activity .activity-item:first-child .activite-label::before {
+  top: 5px;
+}
+
+.activity .activity-item:last-child .activity-content {
+  padding-bottom: 0;
 }
