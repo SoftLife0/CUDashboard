@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getUserData } from '../utils/api';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import List from '../components/List';
 
 const Dashboard = () => {
 
@@ -41,7 +42,14 @@ const Dashboard = () => {
 
       <div className='main-container'>
         <h5>DASHBOARD</h5>
-        {loading && <div>Loading...</div>}
+
+        <div className='row'>
+          <div className="col-12">
+            <List />
+          </div>
+        </div>
+
+        {/* {loading && <div>Loading...</div>}
         {error && <div>Error: {error}</div>}
         {!loading && !error && (
           <div className='main-cards'>
@@ -52,7 +60,7 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </main>
   );
