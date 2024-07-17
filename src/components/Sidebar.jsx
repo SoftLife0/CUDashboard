@@ -107,7 +107,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           <img src={profileImage} alt='' width={100} />
         </div>
         <div className='profile-info'>
-          <div className='profile-name'>{profileName}</div>
+          <div className='profile-name'>Adewale</div>
           <div className='text-muted'>{role}</div>
         </div>
       </div>

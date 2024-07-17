@@ -11,7 +11,6 @@ function Header({OpenSidebar, onProfileClick, showLogout, handleLogout})  {
         <div className='header-left'>   
         <form action="" className='d-flex'>
           <input type="text" placeholder='Search...' style={{ height: '4vh', borderRadius: '5px', border: '1px solid #991813' }} />
-          <BsSearch className='icon'/>
         </form>
         </div>
         <div className='header-right'>

@@ -4,26 +4,22 @@ import { Table, Badge } from 'react-bootstrap';
 
 const List = () => {
   const staffData = [
-    { id: '2457', name: 'Nana Kweku Adumatta', department: 'IT Directorate', rank: 'Senior Member' },
-    { id: '2147', name: 'Onikosi Adewale', department: 'Finance Directorate', rank: 'Junior Staff' },
-    { id: '2457', name: 'Nana Kweku Adumatta', department: 'Audit Directorate', rank: 'Duputy Registrar' },
-    { id: '2147', name: 'Onikosi Adewale', department: 'Chaplaincy', rank: 'Senior Staff' },
-    { id: '2457', name: 'Nana Kweku Adumatta', department: 'SET', rank: 'NSS' },
-    { id: '2147', name: 'Onikosi Adewale', department: 'FASS', rank: 'Faculty' },
+    { id: '2457', name: 'Nana Kweku Adumatta', department: 'IT Directorate', status: 'Active' },
+    { id: '2147', name: 'Onikosi Adewale', department: 'Finance Directorate', status: 'On Leave' },
+    { id: '2457', name: 'Nana Kweku Adumatta', department: 'Audit Directorate', status: 'Resigned' },
+    { id: '2147', name: 'Onikosi Adewale', department: 'Chaplaincy', status: 'Active' },
+    { id: '2457', name: 'Nana Kweku Adumatta', department: 'SET', status: 'Active' },
+    { id: '2147', name: 'Onikosi Adewale', department: 'FASS', status: 'On Leave' },
   ];
 
-  const getRankBadge = (rank) => {
-    switch (rank) {
-      case 'Senior Member':
-        return <Badge bg="success">Senior Member</Badge>;
-      case 'Junior Staff':
-        return <Badge bg="warning">Junior Staff</Badge>;
-      case 'Duputy Registrar':
-        return <Badge bg="danger">Duputy Registrar</Badge>;
-      case 'Senior Staff':
-        return <Badge bg="info">Senior Staff</Badge>;
-        case 'Faculty':
-        return <Badge bg="primary">Faculty</Badge>;
+  const getStatusBadge = (status) => {
+    switch (status) {
+      case 'Active':
+        return <Badge bg="success">Active</Badge>;
+      case 'Resigned':
+        return <Badge bg="danger">Resigned</Badge>;
+      case 'On Leave':
+        return <Badge bg="warning">On Leave</Badge>;
       default:
         return <Badge bg="dark">{rank}</Badge>;
     }
@@ -36,13 +32,13 @@ const List = () => {
         <div className="card-body">
           <h5 className="card-title">Recent Staff </h5>
 
-          <Table borderless className="datatable">
+          <Table borderless className="table-striped">
             <thead>
               <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Department</th>
-                <th>Rank</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
@@ -51,7 +47,7 @@ const List = () => {
                   <th scope="row">{staff.id}</th>
                   <td><a href="#" className="text-primary">{staff.name}</a></td>
                   <td>{staff.department}</td>
-                  <td>{getRankBadge(staff.rank)}</td>
+                  <td>{getStatusBadge(staff.status)}</td>
                 </tr>
               ))}
             </tbody>
