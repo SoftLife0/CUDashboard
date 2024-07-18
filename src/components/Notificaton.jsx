@@ -1,7 +1,5 @@
 import React from 'react'
-import { Badge } from 'react-bootstrap';
 import { BiCircle } from 'react-icons/bi';
-import { TbBackground } from 'react-icons/tb';
 
 
 const Notificaton = () => {
@@ -15,8 +13,10 @@ const Notificaton = () => {
     ];
 
     const badgeStyle = {
-        width: '10px',
-        height: '10px',
+        width: '7px',
+        height: '7px',
+        backgroundColor: '#000',
+        borderRadius: '50%'
     };
 
     return (
@@ -27,7 +27,7 @@ const Notificaton = () => {
             {activities.map((activity, index) => (
                 <div className="activity-item d-flex" key={index}>
                 <div className="activity-content">
-                    <BiCircle style={badgeStyle} bg="warning" className='icon'/>
+                    <BiCircle style={badgeStyle} className='icon'/>
                     {activity.content}
                 </div>
                 </div>

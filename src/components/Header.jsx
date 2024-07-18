@@ -8,17 +8,15 @@ function Header({OpenSidebar, onProfileClick, showLogout, handleLogout})  {
         <div className='menu-icon'>
             <BsJustify className='icon' onClick={OpenSidebar}/>
         </div>
-        <div className='header-left'>   
+
         <form action="" className='d-flex'>
-          <input type="text" placeholder='Search...' style={{ height: '4vh', borderRadius: '5px', border: '1px solid #991813' }} />
+          <input type="text" placeholder='Search...' className='search' />
         </form>
-        </div>
-        <div className='header-right'>
-        <div className=''>
+
+        <div>
           <button className='pill-button' style={{ padding: '8px 12px', borderRadius: '5px'}}>
             Logout
           </button>
-        </div>
         </div>
     </header>
   )

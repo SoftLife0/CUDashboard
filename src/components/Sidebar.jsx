@@ -50,31 +50,33 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             Dashboard
           </div>
         </Link>
+
         <div>
-      <Link to="#" className="side-nav-link" onClick={toggleDropdown}>
-        <div className='side-nav-button'>
-          <BiScatterChart className='icon' />
-          Course Allocation
-          {isOpen ? <BiChevronUp className='ms-auto' /> : <BiChevronDown className='ms-auto' />}
-        </div>
-      </Link>
-      {isOpen && (
-        <div className="side-nav-dropdown">
-          <Link to="/course-elements" className="side-nav-link">
+          <Link to="#" className="side-nav-link" onClick={toggleDropdown}>
             <div className='side-nav-button'>
-              <BiScatterChart className='icon' />
-              Course Elements
+              <Bi className='icon' />
+              Course Allocation
+              {isOpen ? <BiChevronUp className='ms-auto' /> : <BiChevronDown className='ms-auto' />}
             </div>
           </Link>
+          {isOpen && (
+            <div>
+              <Link to="#" className="side-nav-link">
+                <div className='side-nav-button-menu'>
+                  <BiScatterChart className='icon' />
+                  Course Elements
+                </div>
+              </Link>
+              <Link to="#" className="side-nav-link">
+                <div className='side-nav-button-menu'>
+                  <BiScatterChart className='icon' />
+                  Course Elements
+                </div>
+              </Link>
+            </div>
+          )}
         </div>
-      )}
-    </div>
-        <Link to="" className="side-nav-link">
-          <div className='side-nav-button'>
-            <BiScatterChart className='icon'/>
-            Course Allocation
-          </div>
-        </Link>
+
         <Link to="" className="side-nav-link">
           <div className='side-nav-button'>
             <BiGroup className='icon'/>
@@ -104,11 +106,13 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
       <div className='profile-details'>
         <div className='elipse'>
-          <img src={profileImage} alt='' width={100} />
+          <img src={profileImage} alt='' />
         </div>
         <div className='profile-info'>
-          <div className='profile-name'>Adewale</div>
-          <div className='text-muted'>{role}</div>
+          <div>
+            <h6 className='profile-name'> Adewale</h6>
+            <p className='text-muted'>hr-admin</p>
+          </div>
         </div>
       </div>
     </aside>

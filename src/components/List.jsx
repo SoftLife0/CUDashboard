@@ -32,7 +32,7 @@ const List = () => {
         <div className="card-body">
           <h5 className="card-title">Recent Staff </h5>
 
-          <Table borderless className="table-striped">
+          <Table borderless className="table table-hover">
             <thead>
               <tr>
                 <th>Id</th>
