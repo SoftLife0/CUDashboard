@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, Badge } from 'react-bootstrap';
 import { BiEditAlt, BiCloudUpload, BiSolidPlusCircle } from 'react-icons/bi';
+import profileImage from '../assets/softlife.png'
 
 const List = () => {
   const staffData = [
@@ -64,7 +65,7 @@ const List = () => {
               <tbody>
                 {staffData.map((staff, index) => (
                   <tr key={index}>
-                    <td><a href="#" style={{textDecoration: 'none', color:'#000'}}>{staff.name}</a></td>
+                    <td><a href="#" style={{textDecoration: 'none', color:'#000'}}><img src={profileImage} alt="" className='rounded-circle'  style={{ width: '40px', height: '40px', objectFit: 'cover', marginRight: '5px' }} />{staff.name}</a></td>
                     <td scope="row">{staff.jobTitle}</td>
                     <td>{staff.department}</td>
                     <td>{getStatusBadge(staff.status)}</td>

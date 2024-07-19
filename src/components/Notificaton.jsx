@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { BiCircle } from 'react-icons/bi';
-import { Table } from 'react-bootstrap';
+import profileImage from '../assets/softlife.png'
 
 
 const Notificaton = () => {
@@ -9,6 +9,13 @@ const Notificaton = () => {
         { content: 'Quia quae rerum explicabo officiis beatae' },
         { content: 'Voluptatem blanditiis blanditiis eveniet' },
         { content: 'Voluptates corrupti molestias voluptatem' },
+    ];
+
+    const staffLeave = [
+        { name: 'Nana Kweku Adumatta', department: 'IT' },
+        { name: 'Onikosi Adewale', department: 'IT' },
+        { name: 'Onikosi Adewale', department: 'IT' },
+        { name: 'Onikosi Adewale', department: 'IT' },
     ];
 
     const badgeStyle = {
@@ -27,40 +34,18 @@ const Notificaton = () => {
             </div>
 
             <div className=''>
-                <Table className="table table-hover">
-                    <thead>
-                    <tr>
-                    <th>Name</th>
-                    <th>Job Title</th>
-                   
-                    </tr>
-                    </thead>
-                    <tbody className="table-group-divider">
-                        <tr>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                        </tr>
-                    </tbody>
-                </Table>
-            </div>
+                {staffLeave.map((staff) => (
+                    <div key={staff} className='d-flex justify-content-between mb-2'>
+                        <div className='card-body d-flex align-items-center' style={{padding: '1px'}}>
+                            <img src={profileImage} alt="" className='rounded-circle'  style={{ width: '50px', height: '50px', objectFit: 'cover', marginRight: '10px' }} />
+                            <div>
+                                <h6 style={{fontSize:'14px'}}>{staff.name}</h6>
+                                {/* <small className='text-muted'>{staff.department}</small> */}
+                            </div>
 
-            <div className="activity">
-            {activities.map((activity, index) => (
-                <div className="activity-item d-flex" key={index}>
-                <div className="activity-content">
-                    <BiCircle style={badgeStyle} className='icon'/>
-                    {activity.content}
-                </div>
-                </div>
-            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     </div>
