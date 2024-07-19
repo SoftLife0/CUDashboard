@@ -8,13 +8,13 @@ const Card = () => {
         <div className='col-lg-8 col-12'>
             <div className='main-cards'>
                 <div className='dashboard-item'>
-                    <h6 className='text-muted dashboard-item-smalltext'>Active Employees</h6>
+                    <h6 className='text-muted dashboard-item-smalltext'>Total Employees</h6>
                     <div class="d-flex align-items-center">
                         <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
                         <BiUser/>
                         </div>
                         <div className="ps-3">
-                            <h4 className='dashboard-item-text'>17</h4>
+                            <h4 className='dashboard-item-text'>233</h4>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Card = () => {
                         <BiUser/>
                         </div>
                         <div className="ps-3">
-                            <h4 className='dashboard-item-text'>17</h4>
+                            <h4 className='dashboard-item-text'>227</h4>
                         </div>
                     </div>
                 </div>

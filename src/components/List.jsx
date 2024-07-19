@@ -37,18 +37,16 @@ const List = () => {
       <div className="card overflow-auto">
 
         <div className="card-body">
-          <div>
+          <div className="d-flex justify-content-between align-items-center mb-3 p-1">
+            <h5>Recent Staff</h5>
             <div>
-              <h5>Recent Staff </h5>
+              {/* <button className="me-2 pill-button-alternate">
+                <BiCloudUpload className="icon" /> Import From CSV
+              </button> */}
+              <button className='pill-button-alternate' style={{color:'#fff', background:'#992621'}}>
+                <BiSolidPlusCircle className="icon" /> Add Employee
+              </button>
             </div>
-            {/* <div className='row'>
-              <div className='col-md-6'>
-                <p><BiCloudUpload className='icon'/> Import From CSV</p>
-              </div>
-              <div className='col-md-6'>
-                <button><BiSolidPlusCircle className='icon'/> Add Employee</button>
-              </div>
-            </div> */}
           </div>
           
           <div className='table-responsive'>
@@ -65,8 +63,10 @@ const List = () => {
               <tbody>
                 {staffData.map((staff, index) => (
                   <tr key={index}>
-                    <td><a href="#" style={{textDecoration: 'none', color:'#000'}}><img src={profileImage} alt="" className='rounded-circle'  style={{ width: '40px', height: '40px', objectFit: 'cover', marginRight: '5px' }} />{staff.name}</a></td>
-                    <td scope="row">{staff.jobTitle}</td>
+                    <td>
+                      <a href="#" style={{textDecoration: 'none', color:'#000'}}>{staff.name}</a>
+                    </td>
+                    <td>{staff.jobTitle}</td>
                     <td>{staff.department}</td>
                     <td>{getStatusBadge(staff.status)}</td>
                     <td><button onClick={() => handleEdit(staff)} style={{background: '#fff', border: 'none', borderRadius: '5px', }}><BiEditAlt className='icon'/></button></td>

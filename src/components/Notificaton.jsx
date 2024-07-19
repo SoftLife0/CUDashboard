@@ -5,47 +5,41 @@ import profileImage from '../assets/softlife.png'
 
 
 const Notificaton = () => {
-    const activities = [
-        { content: 'Quia quae rerum explicabo officiis beatae' },
-        { content: 'Voluptatem blanditiis blanditiis eveniet' },
-        { content: 'Voluptates corrupti molestias voluptatem' },
-    ];
-
+  
     const staffLeave = [
-        { name: 'Nana Kweku Adumatta', department: 'IT' },
-        { name: 'Onikosi Adewale', department: 'IT' },
-        { name: 'Onikosi Adewale', department: 'IT' },
-        { name: 'Onikosi Adewale', department: 'IT' },
+        { name: 'Nana Kweku Adumatta', department: 'IT', requestType: 'Leave' },
+        { name: 'Onikosi Adewale', department: 'IT', requestType: 'Statement' },
+        { name: 'Onikosi Adewale', department: 'IT', requestType: 'Leave' },
+        { name: 'Onikosi Adewale', department: 'IT', requestType: 'Statement' },
     ];
-
-    const badgeStyle = {
-        width: '7px',
-        height: '7px',
-        backgroundColor: '#000',
-        borderRadius: '50%'
-    };
 
     return (
     <div className="card">
         <div className="card-body">
-            <div className='d-flex justify-content-between align-center '>
-                <h6 className="card-title">Leave Request </h6>
-                <Link to="" style={{textDecoration:'none', color: '#992621'}}><h6>6 request</h6></Link>
+            <div className="d-flex justify-content-between align-items-center">
+                <h6 className="card-title">Pending Approval</h6>
+                <Link to="#" style={{ textDecoration: 'none', color: '#992621' }}>
+                <h6>4 request</h6>
+                </Link>
             </div>
 
             <div className=''>
-                {staffLeave.map((staff) => (
-                    <div key={staff} className='d-flex justify-content-between mb-2'>
-                        <div className='card-body d-flex align-items-center' style={{padding: '1px'}}>
-                            <img src={profileImage} alt="" className='rounded-circle'  style={{ width: '50px', height: '50px', objectFit: 'cover', marginRight: '10px' }} />
-                            <div>
-                                <h6 style={{fontSize:'14px'}}>{staff.name}</h6>
-                                {/* <small className='text-muted'>{staff.department}</small> */}
-                            </div>
-
-                        </div>
+            {staffLeave.map((staff) => (
+                <div key={staff.id} className="list-group-item d-flex align-items-center justify-content-between p-2">
+                    <div className="d-flex align-items-center">
+                    <img
+                        src={profileImage}
+                        alt=""
+                        className="rounded-circle"
+                        style={{ width: '40px', height: '40px', objectFit: 'cover', marginRight: '10px' }}
+                    />
+                    <span>{staff.name}</span>
                     </div>
-                ))}
+                    <div className="d-flex align-items-center">
+                    <span className="text-muted">{staff.requestType}</span>
+                    </div>
+                </div>
+            ))}
             </div>
         </div>
     </div>

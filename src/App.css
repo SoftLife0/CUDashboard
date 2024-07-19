@@ -83,7 +83,19 @@ body {
   text-align: center;
   font-weight: bold;
   transition: width 2s;
-  width: 100%;
+  /* width: 100%; */
+}
+
+.pill-button-alternate {
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius:10px ;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px 0 rgba(48, 44, 255, 0.1);
+  text-align: center;
+  font-weight: bold;
+  transition: width 2s;
 }
 
 /* End of Header */
