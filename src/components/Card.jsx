@@ -5,8 +5,8 @@ const Card = () => {
   return (
     <div className='col-12'>
         <div className='main-cards'>
-            <div className='dashboard-item'>
-                <p className='text-muted'>Total Employees</p>
+        <div className='dashboard-item'>
+                <h6 className='text-muted dashboard-item-smalltext'>Active Employees</h6>
                 <div class="d-flex align-items-center">
                     <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <BiUser/>
@@ -16,8 +16,9 @@ const Card = () => {
                     </div>
                 </div>
             </div>
+            
             <div className='dashboard-item'>
-                <p className='text-muted'>Active Employees</p>
+                <h6 className='text-muted dashboard-item-smalltext'>Active Employees</h6>
                 <div class="d-flex align-items-center">
                     <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <BiUser/>
@@ -29,7 +30,7 @@ const Card = () => {
             </div>
 
             <div className='dashboard-item'>
-                <p className='text-muted'>Active Employees</p>
+                <h6 className='text-muted dashboard-item-smalltext'>Active Employees</h6>
                 <div class="d-flex align-items-center">
                     <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <BiUser/>

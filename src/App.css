@@ -140,7 +140,6 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .side-nav-button-menu {
@@ -253,6 +252,11 @@ body {
 .dashboard-item-text {
   margin-top: 0;
   color: #992621;
+  font-size: 16px;
+}
+
+.dashboard-item-smalltext {
+  font-size: 12px;
 }
 
 /* End of Dashboard */

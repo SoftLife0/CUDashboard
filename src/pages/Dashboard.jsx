@@ -46,14 +46,14 @@ const Dashboard = () => {
         <h5>DASHBOARD</h5>
 
         <div className='row'>
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <Card />
             <List />
           </div>
 
-          <div className="col-lg-4">
+          {/* <div className="col-lg-4">
             <Notificaton />
-          </div>
+          </div> */}
         </div>
 
         {/* {loading && <div>Loading...</div>}

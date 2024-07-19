@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getUserData } from '../utils/api';
 import profileImage from '../assets/fav.png';
-import { BiCuboid, BiChevronDown, BiChevronUp, BiScatterChart, BiGroup, BiDialpadAlt, BiCustomize, BiMessage } from 'react-icons/bi';
+import { BiCuboid, BiChevronDown, BiChevronUp, BiScatterChart, BiGroup, BiDialpadAlt, BiCustomize, BiMessage, BiCog } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
@@ -54,8 +54,8 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         <div>
           <Link to="#" className="side-nav-link" onClick={toggleDropdown}>
             <div className='side-nav-button'>
-              <Bi className='icon' />
-              Course Allocation
+              <BiCog className='icon' />
+              Setup
               {isOpen ? <BiChevronUp className='ms-auto' /> : <BiChevronDown className='ms-auto' />}
             </div>
           </Link>
