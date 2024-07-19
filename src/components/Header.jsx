@@ -9,9 +9,11 @@ function Header({OpenSidebar, onProfileClick, showLogout, handleLogout})  {
             <BsJustify className='icon' onClick={OpenSidebar}/>
         </div>
 
-        <form action="" className='d-flex'>
-          <input type="text" placeholder='Search...' className='search' />
-        </form>
+        <div>
+          <form action="" className='d-flex'>
+            <input type="text" placeholder='Search...' className='search' />
+          </form>
+        </div>
 
         <div>
           <button className='pill-button' style={{ padding: '8px 12px', borderRadius: '5px'}}>

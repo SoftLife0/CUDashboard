@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { BiCircle } from 'react-icons/bi';
+import { Table } from 'react-bootstrap';
 
 
 const Notificaton = () => {
@@ -7,9 +9,6 @@ const Notificaton = () => {
         { content: 'Quia quae rerum explicabo officiis beatae' },
         { content: 'Voluptatem blanditiis blanditiis eveniet' },
         { content: 'Voluptates corrupti molestias voluptatem' },
-        { content: 'Tempore autem saepe occaecati voluptatem tempore' },
-        { content: 'Est sit eum reiciendis exercitationem' },
-        { content: 'Dicta dolorem harum nulla eius. Ut quidem quidem sit quas'},
     ];
 
     const badgeStyle = {
@@ -22,7 +21,37 @@ const Notificaton = () => {
     return (
     <div className="card">
         <div className="card-body">
-            <h5 className="card-title">Recent Activity</h5>
+            <div className='d-flex justify-content-between align-center '>
+                <h6 className="card-title">Leave Request </h6>
+                <Link to="" style={{textDecoration:'none', color: '#992621'}}><h6>6 request</h6></Link>
+            </div>
+
+            <div className=''>
+                <Table className="table table-hover">
+                    <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Job Title</th>
+                   
+                    </tr>
+                    </thead>
+                    <tbody className="table-group-divider">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
+
             <div className="activity">
             {activities.map((activity, index) => (
                 <div className="activity-item d-flex" key={index}>
@@ -39,3 +68,13 @@ const Notificaton = () => {
 }
 
 export default Notificaton
+
+
+// {activities.map((activity, index) => (
+//     <div className="activity-item d-flex" key={index}>
+//     <div className="activity-content">
+//         <BiCircle style={badgeStyle} className='icon'/>
+//         {activity.content}
+//     </div>
+//     </div>
+// ))}

@@ -29,48 +29,51 @@ const List = () => {
     console.log(`Edit staff: ${staff.name}`);
   };
 
+
+
   return (
-    <div className="col-12">
+    <div className="col-lg-12">
       <div className="card overflow-auto">
 
         <div className="card-body">
-          <div className='d-flex justify-content-between align-items-center'>
+          <div>
             <div>
-              <h5 className="card-title">Recent Staff </h5>
+              <h5>Recent Staff </h5>
             </div>
-            <div className='row'>
+            {/* <div className='row'>
               <div className='col-md-6'>
                 <p><BiCloudUpload className='icon'/> Import From CSV</p>
               </div>
               <div className='col-md-6'>
                 <button><BiSolidPlusCircle className='icon'/> Add Employee</button>
               </div>
-            </div>
+            </div> */}
           </div>
           
-          <br />
-          <Table borderless className="table table-hover">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Job Title</th>
-                <th>Department</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {staffData.map((staff, index) => (
-                <tr key={index}>
-                  <td><a href="#" style={{textDecoration: 'none', color:'#000'}}>{staff.name}</a></td>
-                  <td scope="row">{staff.jobTitle}</td>
-                  <td>{staff.department}</td>
-                  <td>{getStatusBadge(staff.status)}</td>
-                  {/* <td><button onClick={() => handleEdit(staff)}><BiEditAlt className='icon'/> Edit</button></td> */}
+          <div className='table-responsive'>
+            <Table borderless className="table table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Job Title</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                  <th>Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
+              </thead>
+              <tbody>
+                {staffData.map((staff, index) => (
+                  <tr key={index}>
+                    <td><a href="#" style={{textDecoration: 'none', color:'#000'}}>{staff.name}</a></td>
+                    <td scope="row">{staff.jobTitle}</td>
+                    <td>{staff.department}</td>
+                    <td>{getStatusBadge(staff.status)}</td>
+                    <td><button onClick={() => handleEdit(staff)} style={{background: '#fff', border: 'none', borderRadius: '5px', }}><BiEditAlt className='icon'/></button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
         </div>
       </div>
     </div>

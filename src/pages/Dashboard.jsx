@@ -43,7 +43,7 @@ const Dashboard = () => {
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
 
       <div className='main-container'>
-        <h5>DASHBOARD</h5>
+        <h5>Dashboard</h5>
 
         <div className='row'>
           <div className="col-lg-12">
