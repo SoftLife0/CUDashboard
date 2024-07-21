@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Setup from './pages/Setup';
 
 function App() { 
   return (
@@ -10,7 +11,8 @@ function App() {
       <main>
           <Switch>
             <Route exact path="/" component={Dashboard} />         
-            <Route exact path="/login" component={Login} />         
+            <Route exact path="/login" component={Login} />
+            <Route path="/setup" component={Setup} />         
           </Switch>
       </main>
     </Router>  
