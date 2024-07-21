@@ -48,8 +48,8 @@ const List = () => {
             </div>
           </div>
           
-          <div className='table-responsive'>
-            <Table borderless className="table table-hover">
+          <div>
+            <Table responsive className="table table-hover">
               <thead>
                 <tr>
                   <th>Name</th>

@@ -241,6 +241,13 @@ body {
 
 }
 
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.275rem;
+  color: #212121;
+}
+
 .main-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -271,6 +278,14 @@ body {
 .dashboard-item-smalltext {
   font-size: 12px;
 }
+
+/* .action-btn {
+  border: none;
+  background: #992621;
+  padding: 2px;
+  color: #fff;
+  border-radius: 5px;
+} */
 
 /* End of Dashboard */
 
