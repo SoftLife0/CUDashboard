@@ -67,7 +67,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                   Schools
                 </div>
               </Link>
-              <Link to="#" className="side-nav-link">
+              <Link to="/setup/banks" className="side-nav-link">
                 <div className='side-nav-button-menu'>
                   <BiChevronRight className='icon' />
                   Banks

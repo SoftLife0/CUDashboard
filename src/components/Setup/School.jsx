@@ -33,13 +33,13 @@ const School = () => {
     <div className="row">
         <div className="col-lg-5">
             <Form
-            title={currentSchool !== null ? 'Edit School' : 'Add New School'}
-            fields={formFields}
-            initialData={currentSchool !== null ? schools[currentSchool] : {}}
-            data={schools}
-            setData={setSchools}
-            currentDataIndex={currentSchool}
-            setCurrentDataIndex={setCurrentSchool}
+                title={currentSchool !== null ? 'Edit School' : 'Add New School'}
+                fields={formFields}
+                initialData={currentSchool !== null ? schools[currentSchool] : {}}
+                data={schools}
+                setData={setSchools}
+                currentDataIndex={currentSchool}
+                setCurrentDataIndex={setCurrentSchool}
             />
         </div>
 

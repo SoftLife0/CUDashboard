@@ -39,7 +39,7 @@ const Form = ({ title, fields, initialData, data, setData, currentDataIndex, set
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
 
-        <form className="row g-3" onSubmit={handleSubmit}>
+        <form className="row g-2 my-2" onSubmit={handleSubmit}>
         {fields.map((field, index) => {
             if (field.type === 'select') {
               return (
@@ -65,7 +65,7 @@ const Form = ({ title, fields, initialData, data, setData, currentDataIndex, set
               />
             );
           })}
-          <div className="text-center">
+          <div className="text-center mt-3">
             <button type="submit" className="pill-button me-2" style={{padding: '8px 12px'}}>Submit</button>
             <button type="reset" className="pill-button-alternate" onClick={() => setFormData({})}>Cancel</button>
           </div>
