@@ -5,7 +5,7 @@ import Notificaton from './Notificaton'
 const Card = () => {
   return (
     <div className="row">
-        <div className='col-lg-8 col-12'>
+        <div className='col-lg-12 col-12'>
             <div className='main-cards'>
                 <div className='dashboard-item'>
                     <h6 className='text-muted dashboard-item-smalltext'>Total Employees</h6>
@@ -54,10 +54,6 @@ const Card = () => {
                     </div>
                 </div>
             </div>    
-        </div>
-
-        <div className="col-lg-4">
-            <Notificaton />
         </div>
     </div>
   )
