@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom';
-import { BiCircle } from 'react-icons/bi';
-import profileImage from '../assets/softlife.png'
+import profileImage from '../../assets/softlife.png'
 
 
 const Notificaton = () => {

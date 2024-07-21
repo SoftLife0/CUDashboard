@@ -1,25 +1,17 @@
-import React, {useState} from 'react'
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import React from 'react'
 import { Route, Switch } from 'react-router-dom';
-import SchoolsForm from '../components/Setup/School';
 import Layout from '../layouts/Layout';
+import SchoolsForm from '../components/Setup/School'
 
 
 const Setup = () => {
 
-    const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
-
-  const OpenSidebar = () => {
-    console.log("Triggered sidebar function")
-    setOpenSidebarToggle(!openSidebarToggle)
-  }
-
   return (
     <Layout>
-        <div>
-            Hi
-        </div>
+       <Switch>
+        <Route path="/setup/schools" component={SchoolsForm} />
+        {/* Add more routes as needed */}
+      </Switch>
     </Layout>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Layout from '../components/Layout'
+import AuthLayout from '../components/AuthLayout'
 
 
 function Login() {
   return (
       <section>
-        <Layout/>
+        <AuthLayout/>
         <div className="container">
             <div className="row"  style={{ justifyContent: 'space-around', minHeight: '80vh', marginTop: '4vh' }}>
 
@@ -33,7 +33,7 @@ function Login() {
                             </div>
                             <br />
                             <Link to='/'>
-                                <button type='submit' className='mb- pill-button'>Submit</button>
+                                <button type='submit' className='mb-3 pill-button' style={{width: '100%'}}>Submit</button>
                             </Link>
 
                             <Link>

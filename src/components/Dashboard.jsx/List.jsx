@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table, Badge } from 'react-bootstrap';
 import { BiEditAlt, BiCloudUpload, BiSolidPlusCircle } from 'react-icons/bi';
-import profileImage from '../assets/softlife.png'
 
 const List = () => {
   const staffData = [

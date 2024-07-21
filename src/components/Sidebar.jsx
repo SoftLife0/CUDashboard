@@ -44,7 +44,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
       <div className='sideNav'>
 
-        <Link to="" className="side-nav-link">
+        <Link to="/" className="side-nav-link">
           <div className='side-nav-button-active'>
             <BiCuboid className='icon'/>
             Dashboard
@@ -61,7 +61,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
           {isOpen && (
             <div>
-              <Link to="/Setup/School" className="side-nav-link">
+              <Link to="/setup/schools" className="side-nav-link">
                 <div className='side-nav-button-menu'>
                   <BiChevronRight className='icon' />
                   Schools

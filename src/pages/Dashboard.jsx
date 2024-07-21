@@ -1,7 +1,7 @@
 import React from 'react';
-import List from '../components/List';
-import Card from '../components/Card';
-import Notificaton from '../components/Notificaton';
+import List from '../components/Dashboard.jsx/List';
+import Card from '../components/Dashboard.jsx/Card';
+import Notificaton from '../components/Dashboard.jsx/Notificaton';
 import Layout from '../layouts/Layout';
 
 const Dashboard = () => {
@@ -20,7 +20,6 @@ const Dashboard = () => {
             <Notificaton />
           </div>
         </div>
-
     </Layout>
   );
 };
