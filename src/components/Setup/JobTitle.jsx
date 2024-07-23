@@ -44,12 +44,14 @@ const School = () => {
         </div>
 
         <div className="col-lg-7">
+            <div className="col-lg-7"> 
                 <DynamicTable
-                    data={schools}
+                    data={banks}
                     fields={formFields}
-                    setData={setSchools}
-                    setCurrentDataIndex={setCurrentSchool}
+                    setData={setBanks}
+                    setCurrentDataIndex={setCurrentBank}
                 />
+            </div>
         </div>
     </div>
   )
