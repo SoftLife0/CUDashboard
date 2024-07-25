@@ -5,13 +5,13 @@ import DynamicTable from '../Forms/DynamicTable';
 
 
 
-const School = () => {
+const JobTitle = () => {
 
-    const [schools, setSchools] = useState([]);
-    const [currentSchool, setCurrentSchool] = useState(null);
+    const [jobTitle, setJobTitle] = useState([]);
+    const [currentJobTitle, setCurrentJobTitle] = useState(null);
 
     const formFields = [
-        { id: 'schoolName', label: 'School Name', type: 'text' },
+        { id: 'jobTitle', label: 'Job Title', type: 'text' },
         { id: 'location', label: 'Location', type: 'text' },
         { id: 'level', label: 'Level', type: 'text' },
     ];
@@ -57,4 +57,4 @@ const School = () => {
   )
 }
 
-export default School
+export default JobTitle
