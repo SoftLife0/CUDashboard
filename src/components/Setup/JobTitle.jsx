@@ -33,13 +33,13 @@ const JobTitle = () => {
     <div className="row">
         <div className="col-lg-5">
             <Form
-                title={currentSchool !== null ? 'Edit Job title' : 'Add New Job title'}
+                title={currentJobTitle !== null ? 'Edit Job title' : 'Add New Job title'}
                 fields={formFields}
-                initialData={currentSchool !== null ? schools[currentSchool] : {}}
-                data={schools}
-                setData={setSchools}
-                currentDataIndex={currentSchool}
-                setCurrentDataIndex={setCurrentSchool}
+                initialData={currentJobTitle !== null ? jobTitle[currentJobTitle] : {}}
+                data={jobTitle}
+                setData={setJobTitle}
+                currentDataIndex={currentJobTitle}
+                setCurrentDataIndex={setCurrentJobTitle}
             />
         </div>
 
