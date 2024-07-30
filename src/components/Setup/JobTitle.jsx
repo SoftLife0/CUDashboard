@@ -33,7 +33,7 @@ const JobTitle = () => {
     <div className="row">
         <div className="col-lg-5">
             <Form
-                title={currentSchool !== null ? 'Edit School' : 'Add New School'}
+                title={currentSchool !== null ? 'Edit Job title' : 'Add New Job title'}
                 fields={formFields}
                 initialData={currentSchool !== null ? schools[currentSchool] : {}}
                 data={schools}
