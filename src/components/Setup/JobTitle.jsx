@@ -46,10 +46,10 @@ const JobTitle = () => {
         <div className="col-lg-7">
             <div className="col-lg-7"> 
                 <DynamicTable
-                    data={banks}
+                    data={jobTitle}
                     fields={formFields}
-                    setData={setBanks}
-                    setCurrentDataIndex={setCurrentBank}
+                    setData={setJobTitle}
+                    setCurrentDataIndex={setCurrentJobTitle}
                 />
             </div>
         </div>
